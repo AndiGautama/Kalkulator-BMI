@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <h1>Kalkulator BMI</h1>
+        
+        <div class="input-box">
+            <label for="weight">Berat Badan (kg)</label>
+            <input type="number" id="weight" placeholder="Masukkan berat badan dalam kg" step="0.1" min="1">
+        </div>
+
+        <div class="input-box">
+            <label for="height">Tinggi Badan (cm)</label>
+            <input type="number" id="height" placeholder="Masukkan tinggi badan dalam cm" step="0.1" min="1">
+        </div>
+
+        <div class="input-box">
+            <label>Jenis Kelamin</label>
+            <div class="gender-buttons">
+                <div class="gender-card" id="male-card" onclick="selectGender('male')">
+                    <span class="person-icon">👨</span>
+                    <span>Laki-laki</span>
+                </div>
+                <div class="gender-card" id="female-card" onclick="selectGender('female')">
+                    <span class="person-icon">👩</span>
+                    <span>Perempuan</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="submit-btn" onclick="calculateBMI()">Hitung BMI</button>
+
+        <div class="result-box" id="result">
+            <div class="big-number" id="bmiValue"></div>
+            <div class="status-text" id="bmiCategory"></div>
+            <div class="advice-text" id="bmiDescription"></div>
+            
+            <div class="info-table">
+                <h3>Kategori BMI:</h3>
+                <div class="table-row">
+                    <span>Kurus</span>
+                    <span>&lt; 18.5</span>
+                </div>
+                <div class="table-row">
+                    <span>Normal</span>
+                    <span>18.5 - 24.9</span>
+                </div>
+                <div class="table-row">
+                    <span>Kelebihan Berat</span>
+                    <span>25.0 - 29.9</span>
+                </div>
+                <div class="table-row">
+                    <span>Obesitas</span>
+                    <span>≥ 30.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
