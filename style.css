@@ -90,10 +90,6 @@ input[type="number"]:focus {
     border-color: #999 !important;
 }
 
-.person-icon {
-    font-size: 18px;
-}
-
 .submit-btn {
     width: 100%;
     padding: 15px;
